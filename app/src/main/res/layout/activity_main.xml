@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGolden"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.6"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cricket2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollview1">
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width1"
+        android:orientation="horizontal"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="@dimen/width1"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/team_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/width2"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:padding="@dimen/width3"
+                android:text="@string/TeamA"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/width4"
+                android:textStyle="bold"
+                tools:fontFamily="@font/aldrich" />
+
+            <TextView
+                android:id="@+id/team_a_game_over"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/width5"
+                android:text=""
+                android:fontFamily="@font/aldrich"
+                android:textSize="@dimen/width6" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/team_a_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+
+                    android:gravity="center"
+
+                    android:text="@string/Zero"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/width7" />
+
+                <TextView
+                    android:id="@+id/team_a_slash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+
+                    android:layout_toEndOf="@+id/team_a_score"
+                    android:layout_toRightOf="@+id/team_a_score"
+                    android:fontFamily="@font/aldrich"
+                    android:text="@string/Slash"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/width7" />
+
+                <TextView
+                    android:id="@+id/team_a_wicket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/team_a_slash"
+                    android:fontFamily="@font/aldrich"
+
+                    android:text="@string/Zero"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/width7" />
+
+                <TextView
+                    android:id="@+id/team_a_over_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_a_score"
+                    android:fontFamily="@font/aldrich"
+                    android:paddingBottom="@dimen/width3"
+                    android:text="@string/Zero"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/width8" />
+
+                <TextView
+                    android:id="@+id/team_a_over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_a_score"
+                    android:layout_toRightOf="@id/team_a_over_number"
+                    android:fontFamily="@font/aldrich"
+                    android:paddingBottom="@dimen/width3"
+                    android:text="@string/over"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/width8" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/width9"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/button_style"
+                    android:fontFamily="@font/aldrich"
+                    android:onClick="addOneForTeamA"
+                    android:textColor="@color/colorYellow"
+                    android:text="@string/one"
+                    android:textSize="@dimen/width10"/>
+
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/width9"
+                    android:layout_marginRight="@dimen/width9"
+                    android:layout_marginTop="@dimen/width9"
+                    android:layout_weight="1"
+                    android:onClick="addTwoForTeamA"
+                    android:text="@string/two"
+                    android:textSize="@dimen/width10"
+                    android:fontFamily="@font/aldrich"
+                    android:textColor="@color/colorYellow"
+                    android:background="@drawable/button_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/width9"
+                    android:layout_marginLeft="@dimen/width9"
+                    android:layout_marginRight="@dimen/width9"
+                    android:layout_weight="1"
+                    android:onClick="addFourForTeamA"
+                    android:text="@string/four"
+                    android:textSize="@dimen/width10"
+                    android:fontFamily="@font/aldrich"
+                    android:textColor="@color/colorYellow"
+                    android:background="@drawable/button_style"/>
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/width9"
+                    android:layout_marginRight="@dimen/width9"
+                    android:layout_weight="1"
+                    android:onClick="addSixForTeamA"
+                    android:text="@string/six"
+                    android:textSize="@dimen/width10"
+                    android:fontFamily="@font/aldrich"
+                    android:textColor="@color/colorYellow"
+                    android:background="@drawable/button_style"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/width9"
+                    android:layout_marginRight="@dimen/width9"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_out"
+                    android:fontFamily="@font/aldrich"
+                    android:onClick="addOutForTeamA"
+                    android:text="@string/out"
+                    android:textColor="@color/colorYellow"
+                    android:textSize="@dimen/width10" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginRight="@dimen/width9"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style"
+                    android:fontFamily="@font/aldrich"
+                    android:onClick="addWideForTeamA"
+                    android:text="@string/wide"
+                    android:textColor="@color/colorYellow"
+                    android:textSize="@dimen/width10" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="@dimen/width1"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/team_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/width2"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:padding="@dimen/width3"
+                android:text="@string/TeamB"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/width4"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/team_b_game_over"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:padding="@dimen/width5"
+                android:text=""
+                android:textSize="@dimen/width6" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/team_b_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:text="@string/Zero"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/width7" />
+
+                <TextView
+                    android:id="@+id/team_b_slash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/team_b_score"
+                    android:layout_toRightOf="@+id/team_b_score"
+                    android:fontFamily="@font/aldrich"
+                    android:text="@string/Slash"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/width7" />
+
+                <TextView
+                    android:id="@+id/team_b_wicket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/team_b_slash"
+                    android:fontFamily="@font/aldrich"
+                    android:text="@string/Zero"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/width7" />
+                <TextView
+                    android:id="@+id/team_b_over_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_b_score"
+                    android:fontFamily="@font/aldrich"
+                    android:paddingBottom="@dimen/width3"
+                    android:text="@string/Zero"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/width8" />
+
+                <TextView
+                    android:id="@+id/team_b_over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_b_score"
+                    android:layout_toRightOf="@id/team_b_over_number"
+                    android:fontFamily="@font/aldrich"
+                    android:paddingBottom="@dimen/width3"
+                    android:text="@string/over"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/width8" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/width9"
+                    android:layout_weight="1"
+                    android:onClick="addOneForTeamB"
+                    android:text="@string/one"
+                    android:textSize="@dimen/width10"
+                    android:fontFamily="@font/aldrich"
+                    android:textColor="@color/colorYellow"
+                    android:background="@drawable/button_style"/>
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/width9"
+                    android:layout_marginRight="@dimen/width9"
+                    android:layout_marginTop="@dimen/width9"
+                    android:layout_weight="1"
+                    android:onClick="addTwoForTeamB"
+                    android:text="@string/two"
+                    android:textColor="@color/colorYellow"
+                    android:fontFamily="@font/aldrich"
+                    android:textSize="@dimen/width10"
+                    android:background="@drawable/button_style"/>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/width9"
+                    android:layout_marginLeft="@dimen/width9"
+                    android:layout_marginRight="@dimen/width9"
+                    android:layout_weight="1"
+                    android:onClick="addfourForTeamB"
+                    android:text="@string/four"
+                    android:fontFamily="@font/aldrich"
+                    android:textSize="@dimen/width10"
+                    android:textColor="@color/colorYellow"
+                    android:background="@drawable/button_style"/>
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/width9"
+                    android:layout_marginRight="@dimen/width9"
+                    android:fontFamily="@font/aldrich"
+                    android:layout_weight="1"
+                    android:onClick="addSixForTeamB"
+                    android:text="@string/six"
+                    android:textSize="@dimen/width10"
+                    android:textColor="@color/colorYellow"
+                    android:background="@drawable/button_style"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button11"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/width9"
+                    android:layout_marginRight="@dimen/width9"
+                    android:layout_weight="1"
+                    android:onClick="addOutForTeamB"
+                    android:text="@string/out"
+                    android:textSize="@dimen/width10"
+                    android:fontFamily="@font/aldrich"
+                    android:textColor="@color/colorYellow"
+                    android:background="@drawable/button_out"/>
+
+                <Button
+                    android:id="@+id/button12"
+                    android:layout_width="@dimen/width1"
+                    android:layout_height="wrap_content"
+                    
+                    android:layout_marginRight="@dimen/width9"
+                    android:background="@drawable/button_style"
+                    android:layout_weight="1"
+                    android:onClick="addWideForTeamB"
+                    android:fontFamily="@font/aldrich"
+                    android:text="@string/wide"
+                    android:textSize="@dimen/width10"
+                    android:textColor="@color/colorYellow"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width1"
+        android:orientation="vertical"
+        android:layout_weight="1">
+    <TextView
+        android:id="@+id/showResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/width11"
+        android:paddingBottom="@dimen/width3"
+        android:paddingTop="@dimen/width3"
+        android:text=""
+        android:layout_gravity="center"
+        android:fontFamily="@font/aldrich"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/width8"
+        android:textStyle="bold"/>
+    <Button
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aldrich"
+        android:layout_gravity="center"
+
+        android:layout_marginBottom="@dimen/width11"
+        android:onClick="displayResult"
+        android:text="@string/result"
+        android:textColor="@color/colorDarkGray"
+        android:background="@drawable/button_result"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/width9"
+        android:onClick="resetScore"
+        android:fontFamily="@font/aldrich"
+        android:layout_gravity="center"
+        android:text="@string/reset"
+
+        android:background="@drawable/button_reset"
+        android:textColor="@color/colorDarkGray"
+        android:textStyle="bold"/>
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Court Counter</string>
+    <string name="TeamA">Team A</string>
+    <string name="Zero">0</string>
+    <string name="Slash">/</string>
+    <string name="one">+1</string>
+    <string name="over">  \(over\)</string>
+    <string name="two">+2</string>
+    <string name="four">+4</string>
+    <string name="six">+6</string>
+    <string name="out">out</string>
+    <string name="wide">w/no</string>
+    <string name="TeamB">Team B</string>
+    <string name="reset">reset</string>
+    <string name="result">result</string>
+    <string name="winA">WINNER : A</string>
+    <string name="winB">WINNER : B</string>
+    <string name="tie">IT IS A TIE !</string>
+v</resources>
